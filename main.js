@@ -314,35 +314,37 @@ const getDayOfWeek = (date) => {
 
 
  
-let arrDate = [
-	{
-		str: "new Date('2021-01-01')",
-		res: dateFormat(new Date('2021-01-01'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
-	},
-	{
-		str: "new Date('2021/01/01')",
-		res: dateFormat(new Date('2021/01/01'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
-	},
-	{
-		str: "new Date('2011-10-10T14:48:00')",
-		res: dateFormat(new Date('2011-10-10T14:00:00'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
-	},
-	{
-		str: "new Date('2011-10-10 14:48:00')",
-		res: dateFormat(new Date('2011-10-10 14:11:00'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
-	},
-	{
-		str: "new Date('2011/10/10 14:48:00')",
-		res: dateFormat(new Date('2011/10/10 14:22:00'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
-	},
-	{
-		str: "new Date('2021.01.01 14:21:33')",
-		res: dateFormat(new Date('2021.01.01 14:21:33'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
-	}
-];
-let result = [];
-for(let value of arrDate){
-	result.push(`<p>${value.str}<br>${value.res}</p>`);
-}
-app.innerHTML = result.join('');
+// let arrDate = [
+// 	{
+// 		str: "new Date('2021-01-01')",
+// 		res: dateFormat(new Date('2021-01-01'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
+// 	},
+// 	{
+// 		str: "new Date('2021/01/01')",
+// 		res: dateFormat(new Date('2021/01/01'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
+// 	},
+// 	{
+// 		str: "new Date('2011-10-10T14:48:00')",
+// 		res: dateFormat(new Date('2011-10-10T14:00:00'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
+// 	},
+// 	{
+// 		str: "new Date('2011-10-10 14:48:00')",
+// 		res: dateFormat(new Date('2011-10-10 14:11:00'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
+// 	},
+// 	{
+// 		str: "new Date('2011/10/10 14:48:00')",
+// 		res: dateFormat(new Date('2011/10/10 14:22:00'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
+// 	},
+// 	{
+// 		str: "new Date('2021.01.01 14:21:33')",
+// 		res: dateFormat(new Date('2021.01.01 14:21:33'), "dddd, mmmm dS, yyyy, h:MM:ss TT")
+// 	}
+// ];
+// let result = [];
+// for(let value of arrDate){
+// 	result.push(`<p>${value.str}<br>${value.res}</p>`);
+// }
+// app.innerHTML = result.join('');
+
+app.innerHTML = dateFormat(new Date('2011-10-10T14:00:00'), "dddd, mmmm dS, yyyy, h:MM:ss TT");
  
