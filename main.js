@@ -345,15 +345,13 @@ const getDayOfWeek = (date) => {
 // 	result.push(`<p>${value.str}<br>${value.res}</p>`);
 // }
 // app.innerHTML = result.join('');
-let strData = '2021-10-10T14:48:00';
- 
-// try{
-// 	app.innerHTML = dateFormat(new Date(strData), "dddd, mmmm dS, yyyy, h:MM:ss TT");
-// }catch(e){
-// 	strData = strData.replace(' ', 'T');
-// 	app.innerHTML = dateFormat(new Date(strData), "dddd, mmmm dS, yyyy, h:MM:ss TT") + '<br>' + e;
-// }
-
-strData = strData.replace(' ', 'T');
+let strData = '2018-01-01 00:00:00.000+01';
+strData = strData.trim().replace(' ', 'T');
+try{
 	app.innerHTML = dateFormat(new Date(strData), "dddd, mmmm dS, yyyy, h:MM:ss TT");
+}catch(e){	 
+	app.innerText = strData;
+}
+
+ 
  
