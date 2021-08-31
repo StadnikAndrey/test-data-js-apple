@@ -345,7 +345,7 @@ const getDayOfWeek = (date) => {
 // 	result.push(`<p>${value.str}<br>${value.res}</p>`);
 // }
 // app.innerHTML = result.join('');
-let d = new Date('2021-10-10');
+let d = new Date('2021/10/10');
 try{
 	app.innerHTML = dateFormat(d, "dddd, mmmm dS, yyyy, h:MM:ss TT");
 }catch(e){
