@@ -345,13 +345,56 @@ const getDayOfWeek = (date) => {
 // 	result.push(`<p>${value.str}<br>${value.res}</p>`);
 // }
 // app.innerHTML = result.join('');
-let strData = '2018-01-01 00:00:00.000+01';
-strData = strData.trim().replace(' ', 'T');
-try{
-	app.innerHTML = dateFormat(new Date(strData), "dddd, mmmm dS, yyyy, h:MM:ss TT");
-}catch(e){	 
-	app.innerText = strData;
-}
+
+// let strData = '2018-01-01 00:00:00.000+01';
+// strData = strData.trim().replace(' ', 'T');
+// try{
+// 	app.innerHTML = dateFormat(new Date(strData), "dddd, mmmm dS, yyyy, h:MM:ss TT");
+// }catch(e){	 
+// 	app.innerText = strData;
+// }
 
  
- 
+let arrDate = [
+	{
+		str: "2021-01-01",
+		 
+	},
+	{
+		str: "2021/01/01",
+		 
+	},
+	{
+		str: "2011-10-10T14:48:00",
+		 
+	},
+	{
+		str: "2011-10-10 14:48:00",
+		 
+	},
+	{
+		str: "2011/10/10 14:48:00",
+		 
+	},
+	{
+		str: "2011/10/10T14:48:00",
+		 
+	},
+	{
+		str: "2021.01.01 14:21:33",
+		 
+	},
+	{
+		str: "2021.01.01T14:21:33",
+		 
+	}
+];
+let result = [];
+for(let value of arrDate){	 
+	try{
+		result.push(`<p>${value.str}<br>${dateFormat(new Date(value.str))}</p>`);
+	}catch(e){			 
+		result.push(`<p style="color:red">${value.str}<br>${e}</p>`);
+	}
+}
+app.innerHTML = result.join(''); 
