@@ -398,3 +398,17 @@ for(let value of arrDate){
 	}
 }
 app.innerHTML = result.join(''); 
+
+let res = [];
+let strData = ['2018-01-01 00:00:00', '2018-01-01T00:00:00.000+01:00'];
+let v = '';
+for(let val of strData){	
+	v = val.trim().replace(' ', 'T'); 
+	try{
+		res.push(`<p>${val}<br>${dateFormat(new Date(v))}</p>`);
+	}catch(e){			 
+		res.push(`<p style="color:red">${val}<br>${e}</p>`);
+	}
+}
+apple.innerHTML = res.join(''); 
+ 
