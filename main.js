@@ -349,7 +349,7 @@ const getDayOfWeek = (date) => {
 try{
 	app.innerHTML = dateFormat(new Date('2011-10-10 14:00:00'), "dddd, mmmm dS, yyyy, h:MM:ss TT");
 }catch(e){
-	app.innerHTML = e;
+	alert(e);
 }
 
  
