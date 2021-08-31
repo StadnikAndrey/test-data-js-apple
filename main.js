@@ -349,7 +349,7 @@ let d = new Date('2022-10-10 14:00:00');
 try{
 	app.innerHTML = dateFormat(d, "dddd, mmmm dS, yyyy, h:MM:ss TT");
 }catch(e){
-	d = new Date('2021-10-10T14:00:00');
+	d = d.replace(' ', 'T');
 	app.innerHTML = dateFormat(d, "dddd, mmmm dS, yyyy, h:MM:ss TT") + '<br>' + e;
 }
 
